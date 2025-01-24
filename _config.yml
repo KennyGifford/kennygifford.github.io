@@ -12,7 +12,7 @@ remote_theme: daattali/beautiful-jekyll@6.0.1
 ############################
 
 # Name of website
-title: Kenny's Project Portfolio
+title: Kenny Gifford
 
 # Your name to show in the footer
 author: Kenny Gifford
@@ -105,7 +105,7 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "kennygifford.github.io"
+# url-pretty: "kennygifford.github.io"
 
 # Add the website title to the title of every page
 title-on-all-pages: true
