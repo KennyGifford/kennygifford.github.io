@@ -26,8 +26,8 @@ navbar-links:
   Projects:
     - Vector Switch: "vector_switch"
     - Solar Charged Night Light: "night_light"
-    - Analog Computing Dev Kit: "acdk"
-    - Electrorheological Fluid: "erf"
+    - Analog Computing Dev Kit: "analog_computing_development_kit"
+    - Electrorheological Fluid: "electrorheological_fluid"
     - Alarm Clock: "alarm_clock"
 
 ################
