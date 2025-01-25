@@ -3,11 +3,11 @@ layout: page
 title: Solar Charged Night Light
 subtitle: for teaching STEM in Armenia
 ---
-In collaboration with MIT students Caitlin Ogoe and Kanokwan Tungkitkancharoen we developed a project for the TUMO program.
+I collaborated with MIT students Caitlin Ogoe and Kanokwan Tungkitkancharoen to develop a project for the TUMO program.
 
 The goal of the project was to teach basic electronics, coding, and 3D modelling concepts over multiple workshops to students ages 14~20.
 
-I helped design the circuit for a solar charged, battery powered, RGB LED with lighting effects control over WiFi. This circuit was to be enclosed by a 3D printed shroud to project custom shadow patterns onto the ceiling.
+I helped design the circuit for a solar charged, battery powered, RGB LED with WiFi control. This circuit was to be enclosed by a 3D printed shroud to project custom shadow patterns onto the ceiling.
 
 ### Constraints
 * Total budget of \$250
@@ -38,7 +38,8 @@ I helped design the circuit for a solar charged, battery powered, RGB LED with l
     <td>
         <a href="https://a.co/d/eCImBkG">Amazon</a>
         <br>
-        <a href="https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf">Datasheet</a></td>
+        <a href="https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf">Datasheet</a>
+    </td>
   </tr>
   <tr>
     <td>1</td>
@@ -46,6 +47,7 @@ I helped design the circuit for a solar charged, battery powered, RGB LED with l
     <td>3W, common anode</td>
     <td>
         <a href="https://cdn-shop.adafruit.com/product-files/2530/FD-3RGB-Y2.pdf">Adafruit</a>
+    </td>
   </tr>
   <tr>
     <td>1</td>
@@ -53,6 +55,7 @@ I helped design the circuit for a solar charged, battery powered, RGB LED with l
     <td>bq25185, USB-C, solar</td>
     <td>
         <a href="https://www.adafruit.com/product/6091">Adafruit</a>
+    </td>
   </tr>
   <tr>
     <td>1</td>
@@ -60,6 +63,7 @@ I helped design the circuit for a solar charged, battery powered, RGB LED with l
     <td>LiPo, 3.7V, 3000mAh</td>
     <td>
         <a href="https://a.co/d/45iwyPS">Amazon</a>
+    </td>
   </tr>
   <tr>
     <td>1</td>
@@ -67,6 +71,7 @@ I helped design the circuit for a solar charged, battery powered, RGB LED with l
     <td>5V, 0.6W</td>
     <td>
         <a href="https://www.adafruit.com/product/5856">Adafruit</a>
+    </td>
   </tr>
   <tr>
     <td>2</td>
@@ -74,6 +79,7 @@ I helped design the circuit for a solar charged, battery powered, RGB LED with l
     <td>400 Point</td>
     <td>
         <a href="https://a.co/d/azNvw7v">Amazon</a>
+    </td>
   </tr>
   <tr>
     <td>3</td>
@@ -81,6 +87,7 @@ I helped design the circuit for a solar charged, battery powered, RGB LED with l
     <td>TIP120, NPN</td>
     <td>
         <a href="https://cdn-shop.adafruit.com/datasheets/TIP120.pdf">Adafruit</a>
+    </td>
   </tr>
   <tr>
     <td>-</td>
@@ -88,6 +95,7 @@ I helped design the circuit for a solar charged, battery powered, RGB LED with l
     <td>variety, 1/2W, 1% tolerance</td>
     <td>
         <a href="https://a.co/d/11eQJZm">Amazon</a>
+    </td>
   </tr>
 </table>
 
