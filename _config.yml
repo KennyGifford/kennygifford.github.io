@@ -1,5 +1,3 @@
-remote_theme: daattali/beautiful-jekyll@6.0.1
-
 ###########################################################
 ### Welcome to Beautiful Jekyll!
 ### This config file is meant for settings that affect your entire website. When you first
@@ -25,7 +23,7 @@ navbar-links:
   About Me: "aboutme"
   Projects:
     - Vector Switch: "vector_switch"
-    - Solar Charged Night Light: "night_light"
+    - Solar Charged Night Light: "2025-01-25-night-light"
     - Analog Computing Dev Kit: "analog_computing_development_kit"
     - Electrorheological Fluid: "electrorheological_fluid"
     - Alarm Clock: "alarm_clock"
@@ -100,7 +98,7 @@ social-network-links:
 share-links-active:
   # twitter: true
   # facebook: true
-  linkedin: true
+  # linkedin: true
   # vk: false
 
 # How to display the link to your website in the footer
@@ -117,7 +115,7 @@ excerpt_length: 50
 feed_show_excerpt: true
 
 # Whether or not to show a list of tags below each post preview in the feed page
-feed_show_tags: false
+feed_show_tags: true
 
 # Add a search button to the navbar
 post_search: true
@@ -150,18 +148,6 @@ footer-col: "#191970"
 footer-text-col: "#FFE4E1"
 footer-link-col: "#F08080"
 footer-hover-col: "#FFB6C1"
-
-# page-col: "#FFFFFF"
-# text-col: "#404040"
-# link-col: "#008AFF"
-# hover-col: "#0085A1"
-# navbar-col: "#EAEAEA"
-# navbar-text-col: "#404040"
-# navbar-border-col: "#DDDDDD"
-# footer-col: "#EAEAEA"
-# footer-text-col: "#777777"
-# footer-link-col: "#404040"
-# footer-hover-col: "#0085A1"
 
 # Alternatively, the navbar, footer, and page background can be set to an image
 # instead of colour
@@ -314,6 +300,7 @@ exclude:
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-toc
 
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
