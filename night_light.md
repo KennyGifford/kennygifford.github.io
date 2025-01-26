@@ -197,12 +197,10 @@ One last thing to consider is the base-to-emitter voltage drop, V<sub>BE</sub>, 
 
 So, the value for resistors R4-R6 is (3.3 - 1.25)V ÷ 2mA = 1,025Ω ~ 1kΩ.
 
-Finally, we have the complete PWM circuit:
-![pwm_circuit_complete](/assets/night_light/pwm_circuit_complete.png)<br>
+Finally, we have the complete PWM circuit:<br>![pwm_circuit_complete](/assets/night_light/pwm_circuit_complete.png)<br>
 
 ## Circuit Design - Complete Circuit
-With the PWM circuit designed, all that is left is to  power and control it.
-![solar_power_circuit](/assets/night_light/solar_power_circuit.png)<br>
+With the PWM circuit designed, all that is left is to  power and control it.<br>![solar_power_circuit](/assets/night_light/solar_power_circuit.png)<br>
 
 ##### Charger
 We'll connect the LOAD pins to the LEDs and ESP32, the DCIN pins to the solar panel, and the BATT pins to the battery.
@@ -212,24 +210,20 @@ We'll connect the LOAD pins to the LEDs and ESP32, the DCIN pins to the solar pa
 So, I cut off the connector and attempted to use a screw terminal. However, the wire gauge was too small for the terminal to bite. I also realized this was the inferior "leaf-spring" terminal type and it could hardly bite 22 gauge wire either. As a last resort I soldered the wires directly to the screw terminal, and they seemed firmly attached.
 But that's not all, because the screw terminal also had a wider pitch than 0.1", but fortunately it still fit the breadboard when it was placed diagonally. Phew.
 
-After connecting the battery to the charger the power indicator lights up. Good sign!
-![battery_to_charger](/assets/night_light/battery_to_charger.jpg)<br>
+After connecting the battery to the charger the power indicator lights up. Good sign!<br>![battery_to_charger](/assets/night_light/battery_to_charger.jpg)<br>
 
 ##### Solar Panel
 We connect the charger to the breadboard rails with the LOAD pins, and then connect the solar panel to the rails. 
 
 >I had soldered 22 gauge wire directly to the solar panel pads and this wire fit snuggly into the breadboard without the need for a connector.
 
-The PWR LED remained on while the CHRG LED remained off because we were indoors.
-![panel_to_charger](/assets/night_light/panel_to_charger.jpg)<br>
+The PWR LED remained on while the CHRG LED remained off because we were indoors.<br>![panel_to_charger](/assets/night_light/panel_to_charger.jpg)<br>
 
 ##### Charging!
-But, after plugging into USB-C we saw the charging indicator turn on, sweet!
-![charger_is_charging](/assets/night_light/charger_is_charging.jpg)<br>
+But, after plugging into USB-C we saw the charging indicator turn on, sweet!<br>![charger_is_charging](/assets/night_light/charger_is_charging.jpg)<br>
 
 ##### ESP32
-Then we connected the ESP32 dev-board to the rails and saw the PWR indicator turn on.
-![esp_to_charger](/assets/night_light/esp_to_charger.jpg)<br>
+Then we connected the ESP32 dev-board to the rails and saw the PWR indicator turn on.<br>![esp_to_charger](/assets/night_light/esp_to_charger.jpg)<br>
 
 ##### Completed Circuit
 Finally, we followed the PWM circuit from above to wire up the RGB LEDs using the appropriate resistors.
@@ -238,11 +232,9 @@ The V~CC~ in the circuit comes from the LOAD pins of the charger, and should be 
 
 We connected GPIO pins 26, 27, and 25 to the Red, Green, and Blue cathodes respectively.
 
-Below is the slight mess of the final circuit. You can't see the LED itself, but it was off because the base pins of the transistors were not being powered when no code was being ran (i.e. no connection from the cathodes to ground was made).
-![completed_circuit](/assets/night_light/completed_circuit.JPG)<br>
+Below is the slight mess of the final circuit. You can't see the LED itself, but it was off because the base pins of the transistors were not being powered when no code was being ran (i.e. no connection from the cathodes to ground was made).<br>![completed_circuit](/assets/night_light/completed_circuit.JPG)<br>
 
 ### Results
-This is a picture Kano took from Armenia after she helped the students design the enclosures.
-![finished_night_lights](/assets/night_light/finished_night_lights.png)<br>
+This is a picture Kano took from Armenia after she helped the students design the enclosures.<br>![finished_night_lights](/assets/night_light/finished_night_lights.png)<br>
 You can see three of the completed circuits.
 Unfortunately I don't have pictures of the LEDs illuminated because I wasn't planning to post about this project ;( and I didn't take any before they left for the trip. But I heard the results turned out great!
