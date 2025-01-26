@@ -115,7 +115,8 @@ To charge the battery we picked an Adafruit charging board. It has status LEDs, 
 ##### Battery
 After choosing the battery charger, we had constraints for the battery itelf. The charger supports a voltage up to 4.2V and recommends a maximum output of 1A. Most commonly available batteries are LiPo at 3.7V and can theoretically support 3.7W of draw. We know this is adequate because our main load is the 3W LED and the MCU should only occasionally need about 264mW☆.
 
->☆ from the datasheet the ESP32-WROOM uses 80mA on average.
+{: .box-note}
+☆ from the datasheet the ESP32-WROOM uses 80mA on average.
 At 3.3V this is: 0.08A * 3.3V = 0.264W
 
 We found the battery capacity required for 30 minutes of run time to be about 441mAh☆.
