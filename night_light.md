@@ -8,7 +8,7 @@ This winter I collaborated with MIT students Caitlin Ogoe and Kanokwan Tungkitka
 
 The goal of the project was to teach basic electronics, coding, and 3D modelling concepts over multiple workshops to students ages 14~20.
 
-I helped design the circuit for a solar charged, battery powered, WiFi controlled, RGB night light. This circuit was to be enclosed by a 3D printed shroud to project custom shadow patterns that the students would design onto the ceiling.
+I helped design the circuit for a solar charged, battery powered, WiFi controlled, RGB night light. This circuit was to be enclosed by a 3D printed shroud to project custom shadow patterns which were designed by the students.
 
 ### Constraints
 * Total budget of \$250
@@ -140,7 +140,7 @@ Unfortunately, our desire for precise current/brightness control of the LEDs and
 ![pwm_circuit](/assets/night_light/pwm_circuit.png)<br>
 This is the basic circuit to control and drive the LEDs with PWM.
 
-V~CC~ is sourced from the load pins of the battery charger, and should be the same as the battery voltage, so around 3.7V.
+V<sub>CC</sub> is sourced from the load pins of the battery charger, and should be the same as the battery voltage, so around 3.7V.
 
 R1-R3 must be calculated to normalize the brightness of each color channel.
 R4-R6 must be calculated for proper transistor base current and switching.
@@ -168,16 +168,16 @@ However, this is only the minimum current required so to guarantee saturation we
 
 ##### Fig. 4 - ESP32 DC Characteristics
 ![esp32_dc_characteristics](/assets/night_light/esp32_dc_characteristics.png)<br>
-The dev board provides the ESP32 with regulated VDD = 3.3V. So, from this table we find that the GPIO pins can output at least 0.8 × 3.3 = 2.64V, and can typically source 40mA.
+The dev board provides the ESP32 with regulated V<sub>DD</sub> = 3.3V. So, from this table we find that the GPIO pins can output at least 0.8 × 3.3 = 2.64V, and can typically source 40mA.
 
 We’d like 2mA of current at the base, so this current is adequate.
 
 ##### Finding R1-R3
 To determine R1-R3 we will use Ohm’s law, R = V ÷ I.
 
-We know we want 100mA of LED current, and that V~CC~ is 3.7V.
+We know we want 100mA of LED current, and that V<sub>CC</sub> is 3.7V.
 We also found that the red LED has 2.1V drop at 100mA and the green and blue LEDs have 3.05V drop.
-Finally, we found the transistor has a collector-to-emitter voltage drop, V~CE~, of 0.7V at 100mA.
+Finally, we found the transistor has a collector-to-emitter voltage drop, V<sub>CE</sub>, of 0.7V at 100mA.
 
 The value for R1 is (3.7 - 2.1 - 0.7)V ÷ 100mA = 9Ω ~ 10Ω.
 The value for R2 and R3 is (3.7 - 3.05 - 0.7)V ÷ 100mA = -0.05Ω ~ 0Ω.
@@ -185,14 +185,14 @@ The value for R2 and R3 is (3.7 - 3.05 - 0.7)V ÷ 100mA = -0.05Ω ~ 0Ω.
 For R1, we’re all set since we have 10Ω resistors.
 However, for R2 and R3 it seems we barely have enough voltage to drive 100mA through the green and blue LEDs...
 
-We could decide to step down our current and recalculate, but we're not going for 100% color accuracy and we're not even going to get it with this method anyways. This is due to our big assumption of V~CC~ equalling exactly 3.7V when really this depends on the voltage of the battery and is not regulated to be fixed at 3.7V.
+We could decide to step down our current and recalculate, but we're not going for 100% color accuracy and we're not even going to get it with this method anyways. This is due to our big assumption of V<sub>CC</sub> equalling exactly 3.7V when really this depends on the voltage of the battery and is not regulated to be fixed at 3.7V.
 
 So, we'll simply use a 0Ω or 1Ω resistor to try not to restrict current too much while still designing a point of failure (this 1/2W resistor) besides the LED itself incase of over-current.
 
 ##### Finding R4-R6
-We know I~B~ = 2mA, and that the GPIO pins can output at least 2.64V, but will most likely output 3.3V.
+We know I<sub>B</sub> = 2mA, and that the GPIO pins can output at least 2.64V, but will most likely output 3.3V.
 
-One last thing to consider is the base-to-emitter voltage drop, V~BE~, of the transistor from Fig. 3 which is 1.25V at 100mA.
+One last thing to consider is the base-to-emitter voltage drop, V<sub>BE</sub>, of the transistor from Fig. 3 which is 1.25V at 100mA.
 
 So, the value for resistors R4-R6 is (3.3 - 1.25)V ÷ 2mA = 1,025Ω ~ 1kΩ.
 
