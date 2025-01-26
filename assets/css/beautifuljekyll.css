@@ -1126,25 +1126,49 @@ pre {
 }
 
 /* ################################################ KENNY CODE ################################################### */
-.side-by-side-content {
-  display: flex;
+/* Sidebar */
+/* Desktop: Sidebar and blog-post are side by side */
+@media (min-width: 1201px) {
+  .side-by-side-content {
+    display: flex;
+  }
+
+  .sidebar {
+    order: 0; /* Sidebar stays on the left */
+    min-width: 30%;
+    max-width: 40%;
+    position: sticky;
+    top: 3em;
+    height: max-content; /* Allows the sidebar to grow with content */
+    background: #FFB6C1;
+    padding: 15px;
+    margin-right: 25px;
+    border: 1px solid #231B1B;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .blog-post {
+    order: 1; /* Blog post stays on the right */
+  }
 }
 
-/* Sidebar */
-.sidebar {
-  width: max-content;
-  max-width: 30%;
-  flex-shrink: 0; /* Prevents shrinking */
-  position: sticky;
-  top: 3em; /* Distance from the top of the viewport */
-  height: max-content; /* Allows the sidebar to grow with content */
-  max-height: 75%;
-  background: #FFB6C1; /* Optional: Background color */
-  padding: 15px;
-  margin-right: 25px;
-  border: 1px solid #231B1B; /* Optional: Border for the sidebar */
-  border-radius: 8px; /* Optional: Rounded corners */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
+/* Mobile: TOC moves above the blog post */
+@media (max-width: 1200px) {
+  .side-by-side-content {
+    display: grid; /* Stack the elements vertically */
+  }
+  .sidebar {
+    max-width: max-content;
+    place-self: center;
+    height: max-content; /* Allows the sidebar to grow with content */
+    background: #FFB6C1;
+    padding: 15px;
+    margin: 15px;
+    border: 1px solid #231B1B;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
 }
 
 /* TOC */
